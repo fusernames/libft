@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/21 15:10:28 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/11/21 15:56:18 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ int					ft_charoc(char const *str, int c);
 
 t_list				*ft_lstgetlast(t_list *lst);
 void				ft_lstaddlast(t_list *start, t_list *new);
+t_list				*ft_lstnewlast(t_list *start, void const *content, size_t content_size);
 
 #endif
