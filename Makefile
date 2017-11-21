@@ -6,13 +6,14 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2017/11/16 00:43:43 by alcaroff         ###   ########.fr        #
+#    Updated: 2017/11/21 06:34:48 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libft.a
-FLAGS=-Wall -Werror -Wextra
-SRC=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
+NAME	=	../libft.a
+FLAGS	=	-Wall -Werror -Wextra
+SRC		=	\
+	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 	ft_memcmp.c ft_strlen.c ft_strlcat.c ft_strstr.c ft_strnstr.c ft_strcat.c \
 	ft_strncat.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strchr.c \
 	ft_strrchr.c ft_strcmp.c ft_strncmp.c ft_isalpha.c ft_isdigit.c \
@@ -24,22 +25,22 @@ SRC=ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 	ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_lstnew.c \
 	ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	ft_isspace.c ft_islower.c ft_isupper.c ft_isblank.c ft_isxdigit.c \
-	ft_strtrimc.c ft_strndup.c ft_itoa_base.c
-OBJ=$(SRC:.c=.o)
+	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c
+OBJ		=	$(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 %.o: %.c
-	gcc -c $< $(FLAGS) -o $@
+	@gcc -c $< $(FLAGS) -o $@
 
 clean:
-	rm -rf *.o
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all

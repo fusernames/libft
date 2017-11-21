@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/16 02:23:17 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/11/19 04:17:09 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ int					ft_isxdigit(int c);
 char				*ft_strtrimc(char const *s, char c);
 char				*ft_strndup(const char *str, size_t n);
 char				*ft_itoa_base(int n, int base);
+int					ft_charoc(char const *str, int c);
 
 #endif

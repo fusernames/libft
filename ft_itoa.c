@@ -6,12 +6,11 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 22:57:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/15 03:21:53 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/11/19 04:54:31 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	getsize(long *n, int *isnegative)
 {
@@ -23,7 +22,7 @@ static size_t	getsize(long *n, int *isnegative)
 		return (1);
 	if (*n < 0)
 	{
-		*n = -*n;
+		*n = -(*n);
 		*isnegative = 1;
 		i++;
 	}

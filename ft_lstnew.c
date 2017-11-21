@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 19:47:39 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/15 04:41:31 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/11/19 10:40:08 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		new->content_size = content_size;
-		new->content = (t_list *)ft_memalloc(sizeof(content_size));
+		new->content = ft_memalloc(sizeof(content_size));
 		if (new->content == NULL)
 		{
 			free(new);
