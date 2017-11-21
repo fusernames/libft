@@ -6,11 +6,12 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2017/11/21 06:34:48 by alcaroff         ###   ########.fr        #
+#    Updated: 2017/11/21 15:08:17 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	../libft.a
+DIR		=	../
+NAME	=	libft.a
 FLAGS	=	-Wall -Werror -Wextra
 SRC		=	\
 	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
@@ -25,14 +26,15 @@ SRC		=	\
 	ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_lstnew.c \
 	ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	ft_isspace.c ft_islower.c ft_isupper.c ft_isblank.c ft_isxdigit.c \
-	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c
+	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c \
+	ft_lstgetlast.c ft_lstaddlast.c
 OBJ		=	$(SRC:.c=.o)
 
-all: $(NAME)
+all: $(DIR)$(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+$(DIR)$(NAME): $(OBJ)
+	@ar rc $(DIR)$(NAME) $(OBJ)
+	@ranlib $(DIR)$(NAME)
 
 %.o: %.c
 	@gcc -c $< $(FLAGS) -o $@
@@ -41,6 +43,6 @@ clean:
 	@rm -rf $(OBJ)
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm -rf $(DIR)$(NAME)
 
 re: fclean all

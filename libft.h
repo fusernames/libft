@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/19 04:17:09 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/11/21 15:10:28 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,8 @@ char				*ft_strtrimc(char const *s, char c);
 char				*ft_strndup(const char *str, size_t n);
 char				*ft_itoa_base(int n, int base);
 int					ft_charoc(char const *str, int c);
+
+t_list				*ft_lstgetlast(t_list *lst);
+void				ft_lstaddlast(t_list *start, t_list *new);
 
 #endif
