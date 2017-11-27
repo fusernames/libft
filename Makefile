@@ -6,14 +6,15 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2017/11/25 13:11:24 by alcaroff         ###   ########.fr        #
+#    Updated: 2017/11/27 14:55:53 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-DIR		=	./
-NAME	=	libft.a
-FLAGS	=	-Wall -Werror -Wextra
-SRC		=	\
+DIR			=	./
+NAME		=	libft.a
+FLAGS		=	-Wall -Werror -Wextra
+INCLUDES	=	includes
+SRC			=	\
 	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 	ft_memcmp.c ft_strlen.c ft_strlcat.c ft_strstr.c ft_strnstr.c ft_strcat.c \
 	ft_strncat.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strchr.c \
@@ -29,7 +30,7 @@ SRC		=	\
 	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c \
 	ft_lstgetlast.c ft_lstaddlast.c ft_lstnewlast.c ft_lstrm.c \
 	ft_lstprintchar.c ft_lstdebugchar.c
-OBJ		=	$(SRC:.c=.o)
+OBJ			=	$(SRC:.c=.o)
 
 all: $(DIR)$(NAME)
 
@@ -38,7 +39,7 @@ $(DIR)$(NAME): $(OBJ)
 	@ranlib $(DIR)$(NAME)
 
 %.o: %.c
-	@gcc -c $< $(FLAGS) -o $@
+	@gcc -c $< $(FLAGS) -o $@ -I $(INCLUDES)
 
 clean:
 	@rm -rf $(OBJ)
