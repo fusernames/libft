@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnewlast.c                                    :+:      :+:    :+:   */
+/*   ft_strjoinself.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 15:50:37 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/25 15:27:45 by alcaroff         ###   ########.fr       */
+/*   Created: 2017/11/22 15:45:54 by alcaroff          #+#    #+#             */
+/*   Updated: 2017/11/22 15:48:46 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnewlast(t_list *start, void const *content, size_t content_size)
+char	*ft_strjoinself(char const *s1, char const *s2)
 {
-	t_list	*new;
+	char	*new;
 
-	new = ft_lstnew(content, content_size);
-	ft_lstaddlast(start, new);
-	if (new == NULL)
-		return (NULL);
+	new = ft_strjoin(s1, s2);
+	free(s1);
 	return (new);
 }

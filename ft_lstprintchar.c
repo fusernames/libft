@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnewlast.c                                    :+:      :+:    :+:   */
+/*   ft_lstprintchar.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 15:50:37 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/25 15:27:45 by alcaroff         ###   ########.fr       */
+/*   Created: 2017/11/22 08:34:47 by alcaroff          #+#    #+#             */
+/*   Updated: 2017/11/22 08:38:09 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnewlast(t_list *start, void const *content, size_t content_size)
+void	ft_lstprintchar(t_list *lst)
 {
-	t_list	*new;
-
-	new = ft_lstnew(content, content_size);
-	ft_lstaddlast(start, new);
-	if (new == NULL)
-		return (NULL);
-	return (new);
+	ft_putstr((char *)lst->content);
 }

@@ -6,11 +6,11 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2017/11/21 18:22:02 by alcaroff         ###   ########.fr        #
+#    Updated: 2017/11/25 13:11:24 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-DIR		=	../
+DIR		=	./
 NAME	=	libft.a
 FLAGS	=	-Wall -Werror -Wextra
 SRC		=	\
@@ -27,7 +27,8 @@ SRC		=	\
 	ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	ft_isspace.c ft_islower.c ft_isupper.c ft_isblank.c ft_isxdigit.c \
 	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c \
-	ft_lstgetlast.c ft_lstaddlast.c ft_lstnewlast.c ft_lstrm.c
+	ft_lstgetlast.c ft_lstaddlast.c ft_lstnewlast.c ft_lstrm.c \
+	ft_lstprintchar.c ft_lstdebugchar.c
 OBJ		=	$(SRC:.c=.o)
 
 all: $(DIR)$(NAME)

@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/21 18:23:49 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/11/22 15:49:17 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,8 @@ t_list				*ft_lstgetlast(t_list *lst);
 void				ft_lstaddlast(t_list *start, t_list *new);
 t_list				*ft_lstnewlast(t_list *start, void const *content, size_t content_size);
 void				ft_lstrm(t_list *lst);
+void				ft_lstprintchar(t_list *lst);
+void				ft_lstdebugchar(t_list *lst);
+char				*ft_strjoinself(char const *s1, char const *s2);
 
 #endif

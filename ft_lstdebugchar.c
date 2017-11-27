@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnewlast.c                                    :+:      :+:    :+:   */
+/*   ft_lstdebugchar.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 15:50:37 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/25 15:27:45 by alcaroff         ###   ########.fr       */
+/*   Created: 2017/11/22 08:40:58 by alcaroff          #+#    #+#             */
+/*   Updated: 2017/11/27 14:45:49 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnewlast(t_list *start, void const *content, size_t content_size)
+void	ft_lstdebugchar(t_list *lst)
 {
-	t_list	*new;
+	int		i;
 
-	new = ft_lstnew(content, content_size);
-	ft_lstaddlast(start, new);
-	if (new == NULL)
-		return (NULL);
-	return (new);
+	i = 1;
+	while (lst)
+	{
+		ft_putnbr(i);
+		ft_putchar(':');
+		ft_putchar('\n');
+		ft_putnbr(lst->content_size);
+		ft_putchar('\n');
+		ft_lstprintchar(lst);
+		ft_putchar('\n');
+		ft_putchar('\n');
+		lst = lst->next;
+		i++;
+	}
 }
