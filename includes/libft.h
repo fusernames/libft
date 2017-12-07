@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/27 15:06:24 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/12/06 21:38:39 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,7 @@ void				ft_lstrm(t_list *lst);
 void				ft_lstprintchar(t_list *lst);
 void				ft_lstdebugchar(t_list *lst);
 char				*ft_strjoinself(char const *s1, char const *s2);
+char				*ft_strtolower(char *str);
+char				*ft_itoa_base_unsigned(unsigned long long n, int base);
 
 #endif

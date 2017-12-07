@@ -6,7 +6,7 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2017/11/27 14:55:53 by alcaroff         ###   ########.fr        #
+#    Updated: 2017/12/06 21:38:13 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ SRC			=	\
 	ft_isspace.c ft_islower.c ft_isupper.c ft_isblank.c ft_isxdigit.c \
 	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c \
 	ft_lstgetlast.c ft_lstaddlast.c ft_lstnewlast.c ft_lstrm.c \
-	ft_lstprintchar.c ft_lstdebugchar.c
+	ft_lstprintchar.c ft_lstdebugchar.c ft_strtolower.c \
+	ft_itoa_base_unsigned.c
 OBJ			=	$(SRC:.c=.o)
 
 all: $(DIR)$(NAME)
