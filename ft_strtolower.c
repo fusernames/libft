@@ -17,7 +17,10 @@ char	*ft_strtolower(char *str)
 	char *ret;
 
 	ret = str;
-	while(*str++)
+	while(*str)
+	{
 		*str = ft_tolower(*str);
+		str++;
+	}	
 	return (ret);
 }
