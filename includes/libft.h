@@ -104,5 +104,6 @@ void				ft_lstdebugchar(t_list *lst);
 char				*ft_strjoinself(char const *s1, char const *s2);
 char				*ft_strtolower(char *str);
 char				*ft_itoa_base_unsigned(unsigned long long n, int base);
+char				*ft_strjoincln(char *s1, char *s2);
 
 #endif

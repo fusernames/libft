@@ -30,7 +30,7 @@ SRC			=	\
 	ft_strtrimc.c ft_strndup.c ft_itoa_base.c ft_charoc.c \
 	ft_lstgetlast.c ft_lstaddlast.c ft_lstnewlast.c ft_lstrm.c \
 	ft_lstprintchar.c ft_lstdebugchar.c ft_strtolower.c \
-	ft_itoa_base_unsigned.c
+	ft_itoa_base_unsigned.c ft_strjoincln.c
 OBJ			=	$(SRC:.c=.o)
 
 all: $(DIR)$(NAME)
