@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   itoa_base_unsigned.c                               :+:      :+:    :+:   */
+/*   itoa_base_un.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 21:29:35 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/12/06 21:41:53 by alcaroff         ###   ########.fr       */
+/*   Created: 2017/12/07 19:18:15 by alcaroff          #+#    #+#             */
+/*   Updated: 2017/12/07 19:20:06 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
 static void		getbase(char *str, unsigned long long n, int base, int size)
 {
@@ -42,13 +42,14 @@ static size_t	getsize(unsigned long long n, int base)
 	return (size);
 }
 
-char			*ft_itoa_base_unsigned(unsigned long long n, int base)
+char			*ft_itoa_base_un(unsigned long long n, int base)
 {
 	char				*str;
 	size_t				size;
 
 	size = getsize(n, base);
-	str = ft_strnew(size);
+	str = malloc(size + 1);
+	str[size] = '\0';
 	if (str == NULL)
 		return (NULL);
 	getbase(str, n, base, size);

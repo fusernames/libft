@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char	*ft_strtolower(char *str)
 {
 	char *ret;
@@ -19,7 +17,8 @@ char	*ft_strtolower(char *str)
 	ret = str;
 	while(*str)
 	{
-		*str = ft_tolower(*str);
+		if (*str >= 'A' && *str <= 'Z')
+			*str += 32;
 		str++;
 	}	
 	return (ret);

@@ -6,13 +6,13 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:32:09 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/15 21:58:33 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/12/06 21:26:08 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-static void		getbase(char *str, long nb, int base, int size)
+static void		getbase(char *str, unsigned long long nb, int base, int size)
 {
 	char	*str_base;
 
@@ -27,23 +27,24 @@ static void		getbase(char *str, long nb, int base, int size)
 	}
 }
 
-static size_t	getsize(long *nb, int *isnegative, int base)
+static size_t	getsize(long long n, unsigned long long *nb,
+		int *isnegative, int base)
 {
-	size_t	size;
-	long	nb_cpy;
+	size_t				size;
+	unsigned long long	nb_cpy;
 
 	if (nb == 0)
 		return (1);
 	size = 0;
-	if (*nb < 0)
+	if (n < 0)
 	{
-		*nb = -*nb;
+		*nb = (-n);
 		if (base == 10)
-		{
-			*isnegative = 1;
 			size++;
-		}
+		*isnegative = 1;
 	}
+	else
+		*nb = n;
 	nb_cpy = *nb;
 	while (nb_cpy > 0)
 	{
@@ -53,21 +54,22 @@ static size_t	getsize(long *nb, int *isnegative, int base)
 	return (size);
 }
 
-char			*ft_itoa_base(int n, int base)
+char			*ft_itoa_base(long long n, int base)
 {
-	long	nb;
-	char	*str;
-	size_t	size;
-	int		isnegative;
+	unsigned long long	nb;
+	char				*str;
+	size_t				size;
+	int					isnegative;
 
 	isnegative = 0;
-	nb = n;
-	size = getsize(&nb, &isnegative, base);
-	str = ft_strnew(size);
+	nb = 0;
+	size = getsize(n, &nb, &isnegative, base);
+	str = malloc(size + 1);
+	str[size] = '\0';
 	if (str == NULL)
 		return (NULL);
 	getbase(str, nb, base, size);
-	if (isnegative)
+	if (isnegative && base == 10)
 		str[0] = '-';
 	return (str);
 }
