@@ -6,11 +6,11 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:32:09 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/12/06 21:26:08 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/12/24 15:57:44 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
 static void		getbase(char *str, unsigned long long nb, int base, int size)
 {

@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/12/06 21:38:39 by alcaroff         ###   ########.fr       */
+/*   Updated: 2017/12/24 16:07:22 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ int					ft_isupper(int c);
 int					ft_isblank(int c);
 int					ft_isxdigit(int c);
 char				*ft_strtrimc(char const *s, char c);
-char				*ft_strndup(const char *str, size_t n);
-char				*ft_itoa_base(int n, int base);
 int					ft_charoc(char const *str, int c);
 
 t_list				*ft_lstgetlast(t_list *lst);
@@ -99,11 +97,10 @@ void				ft_lstaddlast(t_list *start, t_list *new);
 t_list				*ft_lstnewlast(t_list *start, void const *content,
 		size_t content_size);
 void				ft_lstrm(t_list *lst);
-void				ft_lstprintchar(t_list *lst);
-void				ft_lstdebugchar(t_list *lst);
-char				*ft_strjoinself(char const *s1, char const *s2);
-char				*ft_strtolower(char *str);
-char				*ft_itoa_base_unsigned(unsigned long long n, int base);
-char				*ft_strjoincln(char *s1, char *s2);
+char				*ft_itoa_base_un(unsigned long long n, int base);
+char				*ft_itoa_base(long long n, int base);
+char				*ft_strndup(const char *s, int n);
+char				*ft_strtolower(char *s);
+int					ft_strisspace(char *s);
 
 #endif

@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstprintchar.c                                  :+:      :+:    :+:   */
+/*   ft_strisspace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 08:34:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/22 08:38:09 by alcaroff         ###   ########.fr       */
+/*   Created: 2017/12/24 16:06:33 by alcaroff          #+#    #+#             */
+/*   Updated: 2017/12/24 16:06:34 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstprintchar(t_list *lst)
+int	ft_strisspace(const char *str)
 {
-	ft_putstr((char *)lst->content);
+	while (*str)
+	{
+		if (*str != ' ')
+			return (0);
+		str++;
+	}
+	return (1);
 }
