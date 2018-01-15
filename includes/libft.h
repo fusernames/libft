@@ -102,5 +102,6 @@ char				*ft_itoa_base(long long n, int base);
 char				*ft_strndup(const char *s, int n);
 char				*ft_strtolower(char *s);
 int					ft_strisspace(char *s);
+char				**ft_splitwhitespace(char *s);
 
 #endif

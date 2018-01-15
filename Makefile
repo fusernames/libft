@@ -32,12 +32,13 @@ SRC			=	\
 	ft_strtolower.c \
 	ft_itoa_base_un.c \
 	ft_strisspace.c \
+	ft_splitwhitespace.c \
 
 OBJ			=	$(SRC:.c=.o)
 
 all: $(DIR)$(NAME)
 
-$(DIR)$(NAME): $(OBJ)
+$(DIR)$(NAME): $(OBJ) $(INCLUDES)/libft.h
 	@ar rc $(DIR)$(NAME) $(OBJ)
 	@ranlib $(DIR)$(NAME)
 
