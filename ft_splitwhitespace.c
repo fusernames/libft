@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/16 13:46:12 by alcaroff          #+#    #+#             */
-/*   Updated: 2018/01/16 13:46:13 by alcaroff         ###   ########.fr       */
+/*   Updated: 2018/01/24 19:13:30 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	get_len(char *s)
 	i = 0;
 	while (s[i] && !ft_isspace(s[i]))
 		i++;
-	return (i);	
+	return (i);
 }
 
 char		**ft_splitwhitespace(char *s)
