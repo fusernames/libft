@@ -6,7 +6,7 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2017/12/24 16:07:05 by alcaroff         ###   ########.fr        #
+#    Updated: 2018/01/27 19:12:31 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC			=	\
 	ft_itoa_base_un.c \
 	ft_strisspace.c \
 	ft_splitwhitespace.c \
+	get_next_line.c \
 
 OBJ			=	$(SRC:.c=.o)
 
