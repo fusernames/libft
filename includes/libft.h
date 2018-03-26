@@ -91,6 +91,8 @@ int					ft_isblank(int c);
 int					ft_isxdigit(int c);
 char				*ft_strtrimc(char const *s, char c);
 int					ft_charoc(char const *str, int c);
+size_t				ft_linelen(const char *s);
+size_t				ft_tablen(char **tab);
 
 t_list				*ft_lstgetlast(t_list *lst);
 void				ft_lstaddlast(t_list *start, t_list *new);

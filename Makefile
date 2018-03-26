@@ -34,6 +34,8 @@ SRC			=	\
 	ft_strisspace.c \
 	ft_splitwhitespace.c \
 	get_next_line.c \
+	ft_linelen.c \
+	ft_tablen.c \
 
 OBJ			=	$(SRC:.c=.o)
 
