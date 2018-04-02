@@ -48,8 +48,7 @@ char		**ft_splitwhitespace(char *s)
 	i = 0;
 	size = get_nbwords(s);
 	ret = (char **)malloc(sizeof(char *) * size + 1);
-	ret[size] = (char *)malloc(sizeof(char));
-	ret[size][0] = 0;
+	ret[size] = NULL;
 	while (*s)
 	{
 		while (ft_isspace(*s))
