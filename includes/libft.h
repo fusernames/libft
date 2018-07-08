@@ -95,8 +95,8 @@ size_t				ft_linelen(const char *s);
 size_t				ft_tablen(char **tab);
 
 t_list				*ft_lstgetlast(t_list *lst);
-void				ft_lstaddlast(t_list *start, t_list *new);
-t_list				*ft_lstnewlast(t_list *start, void const *content,
+void				ft_lstaddlast(t_list **start, t_list *new);
+t_list				*ft_lstnewlast(t_list **start, void const *content,
 		size_t content_size);
 void				ft_lstrm(t_list *lst);
 char				*ft_itoa_base_un(unsigned long long n, int base);
@@ -104,6 +104,10 @@ char				*ft_itoa_base(long long n, int base);
 char				*ft_strndup(const char *s, int n);
 char				*ft_strtolower(char *s);
 int					ft_strisspace(char *s);
-char				**ft_splitwhitespace(char *s);
+int					ft_tabfree(char **tab);
+int					ft_lstlen(t_list *lst);
+t_list				*ft_lstnewadd(void const *content, size_t content_size, t_list **alst);
+int					ft_lstfree(t_list **alst);
+t_list				*ft_lstdup(t_list *lst);
 
 #endif

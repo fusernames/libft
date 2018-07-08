@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-t_list	*ft_lstnewlast(t_list *start, void const *content, size_t content_size)
+t_list	*ft_lstnewlast(t_list **start, void const *content, size_t content_size)
 {
 	t_list	*new;
-
+	
 	new = ft_lstnew(content, content_size);
 	ft_lstaddlast(start, new);
 	if (new == NULL)

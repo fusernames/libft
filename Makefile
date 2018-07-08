@@ -32,10 +32,14 @@ SRC			=	\
 	ft_strtolower.c \
 	ft_itoa_base_un.c \
 	ft_strisspace.c \
-	ft_splitwhitespace.c \
 	get_next_line.c \
 	ft_linelen.c \
 	ft_tablen.c \
+	ft_tabfree.c \
+	ft_lstlen.c \
+	ft_lstnewadd.c \
+	ft_lstfree.c \
+	ft_lstdup.c \
 
 OBJ			=	$(SRC:.c=.o)
 
