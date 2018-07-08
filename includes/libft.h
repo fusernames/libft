@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/12/24 16:07:22 by alcaroff         ###   ########.fr       */
+/*   Updated: 2018/07/08 15:25:38 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,6 @@ int					ft_lstlen(t_list *lst);
 t_list				*ft_lstnewadd(void const *content, size_t content_size, t_list **alst);
 int					ft_lstfree(t_list **alst);
 t_list				*ft_lstdup(t_list *lst);
+char				**ft_splitwhitespace(char *s);
 
 #endif
