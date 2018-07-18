@@ -110,5 +110,6 @@ t_list				*ft_lstnewadd(void const *content, size_t content_size, t_list **alst)
 int					ft_lstfree(t_list **alst);
 t_list				*ft_lstdup(t_list *lst);
 char				**ft_splitwhitespace(char *s);
+t_list				*ft_lstcpy(t_list *lst);
 
 #endif

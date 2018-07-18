@@ -41,6 +41,7 @@ SRC			=	\
 	ft_lstfree.c \
 	ft_lstdup.c \
 	ft_splitwhitespace.c \
+	ft_lstcpy.c \
 
 OBJ			=	$(SRC:.c=.o)
 

@@ -20,5 +20,7 @@ void	ft_lstrm(t_list *lst)
 	{
 		tmp = lst;
 		lst = lst->next;
+		free(tmp->content);
+		free(tmp);
 	}
 }
