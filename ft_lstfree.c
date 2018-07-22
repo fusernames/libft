@@ -22,7 +22,8 @@ int		ft_lstfree(t_list **alst)
 	{
 		tmp = lst;
 		lst = lst->next;
-		free(tmp->content);
+		if (tmp->content_size > 0)
+			free(tmp->content);
 		free(tmp);
 	}
 	*alst = NULL;
