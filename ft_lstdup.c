@@ -19,7 +19,7 @@ t_list	*ft_lstdup(t_list *lst)
 	cpy = NULL;
 	while (lst)
 	{
-		ft_lstnewadd(lst->content, lst->content_size, &cpy);
+		ft_lstnewlast(lst->content, lst->content_size, &cpy);
 		lst = lst->next;
 	}
 	return (cpy);

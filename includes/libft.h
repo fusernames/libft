@@ -96,8 +96,8 @@ size_t				ft_tablen(char **tab);
 
 t_list				*ft_lstgetlast(t_list *lst);
 void				ft_lstaddlast(t_list **start, t_list *new);
-t_list				*ft_lstnewlast(t_list **start, void const *content,
-		size_t content_size);
+t_list				*ft_lstnewlast(void const *content, size_t content_size,
+		t_list **start);
 void				ft_lstrm(t_list *lst);
 char				*ft_itoa_base_un(unsigned long long n, int base);
 char				*ft_itoa_base(long long n, int base);

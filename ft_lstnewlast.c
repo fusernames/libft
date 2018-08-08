@@ -12,7 +12,8 @@
 
 #include "libft.h"
 
-t_list	*ft_lstnewlast(t_list **start, void const *content, size_t content_size)
+t_list	*ft_lstnewlast(void const *content, size_t content_size,
+		t_list **start)
 {
 	t_list	*new;
 
