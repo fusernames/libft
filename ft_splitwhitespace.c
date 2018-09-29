@@ -47,7 +47,7 @@ char		**ft_splitwhitespace(char *s)
 
 	i = 0;
 	size = get_nbwords(s);
-	ret = (char **)malloc(sizeof(char *) * size + 1);
+	ret = (char **)malloc(sizeof(char *) * (size + 1));
 	ret[size] = NULL;
 	while (*s)
 	{
