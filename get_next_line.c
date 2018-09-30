@@ -88,6 +88,8 @@ int				get_next_line(const int fd, char **line)
 
 	if (fd < 0 || line == NULL)
 		return (-1);
+	if (line && *line)
+		free(*line);
 	elem = get_elem(fd, &start);
 	ret = 1;
 	if (elem->str)
