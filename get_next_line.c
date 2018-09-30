@@ -90,6 +90,7 @@ int				get_next_line(const int fd, char **line)
 		return (-1);
 	if (line && *line)
 		free(*line);
+	*line = NULL;
 	elem = get_elem(fd, &start);
 	ret = 1;
 	if (elem->str)
