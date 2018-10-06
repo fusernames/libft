@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 15:29:56 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/28 11:09:29 by alcaroff         ###   ########.fr       */
+/*   Updated: 2018/10/06 18:41:11 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,10 +94,8 @@ int				get_next_line(const int fd, char **line)
 	elem = get_elem(fd, &start);
 	ret = 1;
 	if (elem->str)
-	{
 		if (elem->str[get_len(elem->str)])
 			return (next_line(ret, &(elem->str), line));
-	}
 	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
 	{
 		buf[ret] = '\0';
