@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 21:53:47 by alcaroff          #+#    #+#             */
-/*   Updated: 2018/08/13 07:10:38 by alcaroff         ###   ########.fr       */
+/*   Updated: 2018/10/09 16:04:36 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,6 @@ int					ft_lstfree(t_list **alst);
 t_list				*ft_lstdup(t_list *lst);
 char				**ft_splitwhitespace(char *s);
 t_list				*ft_lstcpy(t_list *lst);
+int					ft_strisnum(char *str);
 
 #endif

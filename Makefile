@@ -6,7 +6,7 @@
 #    By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 15:15:20 by alcaroff          #+#    #+#              #
-#    Updated: 2018/07/08 15:26:40 by alcaroff         ###   ########.fr        #
+#    Updated: 2018/10/09 16:05:29 by alcaroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRC			=	\
 	ft_lstdup.c \
 	ft_splitwhitespace.c \
 	ft_lstcpy.c \
+	ft_strisnum.c \
 
 OBJ			=	$(SRC:.c=.o)
 
