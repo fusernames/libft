@@ -6,7 +6,7 @@
 /*   By: alcaroff <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 16:52:26 by alcaroff          #+#    #+#             */
-/*   Updated: 2017/11/11 12:35:05 by alcaroff         ###   ########.fr       */
+/*   Updated: 2018/10/11 16:16:50 by alcaroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcat(char *dest, const char *src)
 
 	dest_len = ft_strlen(dest);
 	i = 0;
-	while (src[i])
+	while (src && src[i])
 	{
 		dest[dest_len + i] = src[i];
 		i++;
