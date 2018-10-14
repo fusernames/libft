@@ -113,5 +113,6 @@ t_list				*ft_lstdup(t_list *lst);
 char				**ft_splitwhitespace(char *s);
 t_list				*ft_lstcpy(t_list *lst);
 int					ft_strisnum(char *str);
+char				*ft_strmerge(char *s1, char *s2);
 
 #endif

@@ -43,6 +43,7 @@ SRC			=	\
 	ft_splitwhitespace.c \
 	ft_lstcpy.c \
 	ft_strisnum.c \
+	ft_strmerge.c \
 
 OBJ			=	$(SRC:.c=.o)
 

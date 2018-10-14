@@ -12,17 +12,6 @@
 
 #include "get_next_line.h"
 
-static char		*self_join(char *s1, const char *s2)
-{
-	char	*new;
-
-	if (s1 == NULL)
-		s1 = ft_memalloc(1);
-	new = ft_strjoin(s1, s2);
-	free(s1);
-	return (new);
-}
-
 static size_t	get_len(char *str)
 {
 	size_t	i;
@@ -84,7 +73,7 @@ int				get_next_line(const int fd, char **line)
 	static t_str	*start = NULL;
 	t_str			*elem;
 	char			buf[BUFF_SIZE + 1];
-	ssize_t			ret;
+	int				ret;
 
 	if (fd < 0 || line == NULL)
 		return (-1);
@@ -99,7 +88,7 @@ int				get_next_line(const int fd, char **line)
 	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
 	{
 		buf[ret] = '\0';
-		if (!(elem->str = self_join(elem->str, buf)))
+		if (!(elem->str = ft_strmerge(elem->str, ft_strdup(buf))))
 			return (-1);
 		if (ft_strchr(buf, '\n'))
 			break ;
